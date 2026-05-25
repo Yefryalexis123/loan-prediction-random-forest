@@ -53,38 +53,4 @@ loan-prediction-random-forest/
 │
 └── docs/
 
-Instalación local en Linux
 
-1. Clonar repositorio
-git clone https://github.com/Yefryalexis123/loan-prediction-random-forest.git
-cd loan-prediction-random-forest
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-streamlit run app/app.py
-http://localhost:8501
-
-Instalación local en Windows
-1. Clonar repositorio
-git clone https://github.com/Yefryalexis123/loan-prediction-random-forest.git
-cd loan-prediction-random-forest
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-streamlit run app/app.py
-http://localhost:8501
-
-
-
-
-Uso de la aplicación
-Ingresar datos del pasajero.
-Presionar el botón
-🔍 Predecir Supervivencia
-La aplicación mostrará si el pasajero probablemente sobreviviría o no.
-
-
-Autores
-Yefry Córdoba — Integración y despliegue
-Integrante 2 — Notebook y preprocessing
-Integrante 3 — Diseño Streamlit
