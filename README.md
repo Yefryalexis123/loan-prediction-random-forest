@@ -3,6 +3,7 @@
 **Estudiantes:** Juan Fernando Bueno Torres , YEFRY ALEXIS MUÑETON CORDOBA , JONATHAN PEDROZA BERNAL
 
 **Asignatura:** Inteligencia Artificial I  
+
 **Actividad:** Despliegue de modelo de Machine Learning en la nube  
 
 ---
