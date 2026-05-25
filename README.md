@@ -1,64 +1,31 @@
-# loan-prediction-random-forest
-random-forest-ml-app trabajo final--- Machine Learning web application using Random Forest
+# Random Forest — Predicción de Supervivencia en Titanic
 
-Descripción
+**Estudiante:** Juan Fernando Bueno Torres  
+**Asignatura:** Inteligencia Artificial I  
+**Actividad:** Despliegue de modelo de Machine Learning en la nube  
 
-Este proyecto consiste en el desarrollo de una aplicación web de Machine Learning utilizando el algoritmo Random Forest para predecir la supervivencia de pasajeros del Titanic.
+---
 
-La aplicación permite al usuario ingresar características de un pasajero, como clase, sexo, edad y tarifa pagada, para determinar si probablemente habría sobrevivido o no al desastre del Titanic.
+# Descripción del proyecto
 
-El proyecto fue desarrollado como parte de la asignatura de Inteligencia Artificial I, aplicando el ciclo completo de un proyecto de Machine Learning:
+Este proyecto implementa un modelo de Machine Learning utilizando el algoritmo **Random Forest** para predecir la supervivencia de pasajeros del Titanic a partir de características como edad, sexo, clase y tarifa pagada.
 
-Preprocesamiento de datos
-Entrenamiento del modelo
-Evaluación de métricas
-Serialización del modelo
-Desarrollo de aplicación web
-Versionamiento con Git y GitHub
-Algoritmo utilizado
-Random Forest Classifier
+La aplicación fue desarrollada en **Python** utilizando **Streamlit** como framework web, permitiendo que cualquier usuario pueda ingresar datos manualmente y obtener una predicción en tiempo real.
 
-Se utilizó el algoritmo Random Forest debido a su:
+El proyecto busca demostrar el flujo completo de un sistema de Machine Learning, desde el entrenamiento del modelo hasta su integración en una aplicación web funcional.
 
-alta precisión en problemas de clasificación,
-capacidad para manejar datos categóricos y numéricos,
-robustez frente a overfitting,
-buen desempeño en datasets medianos.
-Métricas obtenidas
-Métrica	Resultado
-Accuracy	82.12%
-Precision	80.0%
-Recall	75.67%
-F1 Score	77.78%
-Dataset
-Titanic Dataset
+---
 
-Dataset utilizado para predecir la supervivencia de pasajeros del Titanic.
+# Problema a resolver
 
-Fuente
-Kaggle Titanic Dataset
-Features utilizadas
-Pclass
-Sex
-Age
-SibSp
-Parch
-Fare
-Embarked
-Target
+El objetivo principal es determinar si un pasajero del Titanic tenía probabilidades de sobrevivir o no, utilizando información histórica del dataset.
+
+Este problema corresponde a un caso de **clasificación supervisada**, ya que el modelo aprende a partir de datos previamente etiquetados.
+
+La variable objetivo es:
+
+```text
 Survived
-Tecnologías utilizadas
-Python
-Pandas
-NumPy
-Scikit-learn
-Streamlit
-Joblib
-Matplotlib
-Seaborn
-
-
-Estructura del proyecto
 
 loan-prediction-random-forest/
 │
