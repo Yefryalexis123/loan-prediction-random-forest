@@ -10,7 +10,7 @@ from src.preprocessing import preprocess_input
 # ── Configuración de página ──────────────────────────────────────────────────
 st.set_page_config(
     page_title="Titanic Predictor · Grupo 6",
-    page_icon="🚢",
+    
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -171,7 +171,7 @@ model, model_loaded = load_model()
 # ── HERO ──────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="hero-header">
-    <div class="badge-algo">🌲 Random Forest · Clasificación binaria</div>
+    <div class="badge-algo"> Random Forest · Clasificación binaria</div>
     <h1>Titanic Survival Predictor</h1>
     <p>Ingresa los datos del pasajero y el modelo predice si habría sobrevivido al naufragio del Titanic.</p>
 </div>
@@ -213,14 +213,14 @@ st.markdown("""
 
 # ── ADVERTENCIA SI MODELO NO CARGA ────────────────────────────────────────────
 if not model_loaded:
-    st.warning("⚠️ Modelo no encontrado en `models/modelo.pkl`. Ejecuta el notebook primero para generarlo.", icon="⚠️")
+    st.warning(" Modelo no encontrado en `models/modelo.pkl`. Ejecuta el notebook primero para generarlo.", )
 
 
 # ── LAYOUT PRINCIPAL ──────────────────────────────────────────────────────────
 col_form, col_result = st.columns([1.2, 1], gap="large")
 
 with col_form:
-    st.markdown('<div class="section-title">🎫 Datos del pasajero</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title"> Datos del pasajero</div>', unsafe_allow_html=True)
 
     c1, c2 = st.columns(2)
     with c1:
@@ -240,13 +240,13 @@ with col_form:
                             format_func=lambda x: {"S": "Southampton (S)", "Q": "Queenstown (Q)", "C": "Cherbourg (C)"}[x])
 
     st.markdown("<br>", unsafe_allow_html=True)
-    predecir = st.button("🔍 Predecir supervivencia")
+    predecir = st.button(" Predecir supervivencia")
 
 
 # ── RESULTADO ─────────────────────────────────────────────────────────────────
 # ── Muestra resultado con confianza y tabla resumen del pasajero ──────────────
 with col_result:
-    st.markdown('<div class="section-title">📊 Resultado de la predicción</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title"> Resultado de la predicción</div>', unsafe_allow_html=True)
 
     if predecir:
         if not model_loaded:
@@ -271,7 +271,7 @@ with col_result:
                     confianza = round(prob[1] * 100, 1)
                     st.markdown(f"""
                     <div class="result-box result-survived">
-                        <div class="result-icon">✅</div>
+                        <div class="result-icon"></div>
                         <div class="result-title">Sobreviviría</div>
                         <p class="result-desc">El modelo estima que este pasajero habría sobrevivido al naufragio.</p>
                     </div>
@@ -281,7 +281,7 @@ with col_result:
                     confianza = round(prob[0] * 100, 1)
                     st.markdown(f"""
                     <div class="result-box result-died">
-                        <div class="result-icon">❌</div>
+                        <div class="result-icon"></div>
                         <div class="result-title">No sobreviviría</div>
                         <p class="result-desc">El modelo estima que este pasajero no habría sobrevivido.</p>
                     </div>
@@ -311,26 +311,26 @@ with col_result:
                 st.error(f"Error al predecir: {e}")
 
     else:
-        st.info("👈 Completa el formulario y presiona **Predecir supervivencia** para ver el resultado.")
+        st.info(" Completa el formulario y presiona **Predecir supervivencia** para ver el resultado.")
 
         sex_icon  = "👨" if True else "👩"
         st.markdown("""
         <div class="info-card">
-            <strong>📁 Dataset</strong>
+            <strong> Dataset</strong>
             Titanic Dataset · Kaggle<br>
             891 registros · 712 válidos · 8 features
         </div>
         <div class="info-card">
-            <strong>🌲 Algoritmo</strong>
+            <strong> Algoritmo</strong>
             Random Forest Classifier<br>
             100 árboles · random_state=42 · Gini criterion
         </div>
         <div class="info-card">
-            <strong>🎯 Features usadas</strong>
+            <strong> Features usadas</strong>
             Pclass, Sex, Age, SibSp, Parch, Fare, Embarked
         </div>
         <div class="info-card">
-            <strong>👥 Grupo 6 · IA I</strong>
+            <strong> Grupo 6 · IA I</strong>
             Fundación Universitaria Los Libertadores<br>
             Juan Fernando · Yefry · Jonathan
         </div>
