@@ -175,6 +175,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+# ── Métricas calculadas con test set (20%) sobre 712 registros válidos ────────
 # ── MÉTRICAS REALES DEL MODELO ────────────────────────────────────────────────
 st.markdown("""
 <div class="metrics-row">
