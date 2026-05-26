@@ -123,7 +123,7 @@ html, body, [class*="css"] {
 }
 .result-survived .result-title { color: #0A7030; }
 .result-died     .result-title { color: #B82020; }
-.result-desc { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+.result-desc { font-size: 0.9rem; color: #444444; margin: 0; }
 
 .info-card {
     background: var(--card-bg);
@@ -132,8 +132,9 @@ html, body, [class*="css"] {
     padding: 0.85rem 1.1rem;
     margin-bottom: 0.8rem;
     font-size: 0.85rem;
+    color: #333333;
 }
-.info-card strong { color: var(--brand-mid); display: block; margin-bottom: 2px; }
+.info-card strong { color: #2E7DF7; display: block; margin-bottom: 2px; }
 
 .stButton > button {
     background: #2E7DF7 !important;
@@ -148,6 +149,8 @@ html, body, [class*="css"] {
 }
 .stButton > button:hover { opacity: 0.87 !important; }
 
+label { color: #cccccc !important; }
+[data-testid="stMarkdownContainer"] p { color: #cccccc; }            
 #MainMenu, footer, header { visibility: hidden; }
 </style>
 """, unsafe_allow_html=True)
