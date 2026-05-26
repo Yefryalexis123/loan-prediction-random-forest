@@ -3,7 +3,9 @@
 **Estudiantes:** Juan Fernando Bueno Torres · Yefry Alexis Muñetón Córdoba · Jonathan Pedroza Bernal
 
 **Asignatura:** Inteligencia Artificial I
+
 **Actividad:** Despliegue de modelo de Machine Learning en la nube
+
 **Institución:** Fundación Universitaria Los Libertadores
 
 ---
