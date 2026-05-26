@@ -241,6 +241,7 @@ with col_form:
 
 
 # ── RESULTADO ─────────────────────────────────────────────────────────────────
+# ── Muestra resultado con confianza y tabla resumen del pasajero ──────────────
 with col_result:
     st.markdown('<div class="section-title">📊 Resultado de la predicción</div>', unsafe_allow_html=True)
 
