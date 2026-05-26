@@ -338,7 +338,7 @@ with col_result:
 st.markdown("---")
 st.markdown(
     "<p style='text-align:center; color:#6B7A9A; font-size:0.8rem;'>"
-    "Grupo 6 · Inteligencia Artificial I · Fundación Universitaria Los Libertadores · 2025 &nbsp;·&nbsp; "
+    "Grupo 6 · Juan Fernando · Yefry · Jonathan · IA I · Los Libertadores · 2026 &nbsp;·&nbsp; "
     "Random Forest + Streamlit"
     "</p>",
     unsafe_allow_html=True
