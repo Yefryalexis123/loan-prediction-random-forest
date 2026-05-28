@@ -1,126 +1,79 @@
-# Random Forest — Predicción de Supervivencia en Titanic
+# Predicción académica con Random Forest
 
-**Estudiantes:** Juan Fernando Bueno Torres · Yefry Alexis Muñetón Córdoba · Jonathan Pedroza Bernal
+Este proyecto fue adaptado para trabajar con el archivo `dataset.csv`. Aunque el repositorio original estaba orientado a predicción de préstamos, el dataset cargado corresponde a información académica de estudiantes y su variable objetivo es `Target`, con tres posibles clases:
 
-**Asignatura:** Inteligencia Artificial I
+- `Dropout`: estudiante en riesgo de deserción o retiro.
+- `Enrolled`: estudiante aún matriculado.
+- `Graduate`: estudiante graduado.
 
-**Actividad:** Despliegue de modelo de Machine Learning en la nube
+## Objetivo del proyecto
 
-**Institución:** Fundación Universitaria Los Libertadores
+Construir una aplicación en Streamlit que permita explorar el dataset, entrenar un modelo de Random Forest y realizar predicciones individuales sobre el resultado académico de un estudiante.
 
----
+## Estructura
 
-## Descripción
+```text
+proyecto_random_forest_estudiantes/
+├── app.py
+├── train_model.py
+├── requirements.txt
+├── README.md
+├── data/
+│   └── dataset.csv
+└── models/
+```
 
-Este proyecto implementa un modelo de Machine Learning utilizando el algoritmo **Random Forest** para predecir si un pasajero del Titanic habría sobrevivido al naufragio, a partir de características como edad, sexo, clase y tarifa pagada.
+## Variables del dataset
 
-La aplicación fue desarrollada en **Python** con **Streamlit** como framework web, permitiendo que cualquier usuario ingrese datos y obtenga una predicción en tiempo real.
+El dataset contiene 4.424 registros y 35 columnas. La columna objetivo es `Target`. Las demás columnas se usan como variables predictoras, por ejemplo:
 
-El proyecto demuestra el flujo completo de un sistema de Machine Learning, desde el entrenamiento del modelo hasta su integración en una aplicación web funcional.
+- Estado civil.
+- Modo de aplicación.
+- Curso.
+- Nacionalidad.
+- Deudor.
+- Pago de matrícula al día.
+- Género.
+- Becario.
+- Edad al momento de matrícula.
+- Unidades curriculares inscritas, evaluadas y aprobadas.
+- Promedio académico del primer y segundo semestre.
+- Tasa de desempleo, inflación y PIB.
 
----
+## Resultados aproximados del modelo
 
-## Demostración
+Con una partición 80/20 y Random Forest con 200 árboles, el modelo obtiene resultados aproximados de:
 
-> App en desarrollo local — despliegue en la nube próximamente.
+- Accuracy: 78.08 %
+- F1 macro: 70.50 %
+- Recall macro: 69.36 %
 
-Capturas de pantalla disponibles en la carpeta `docs/`.
+Estos valores pueden cambiar ligeramente si se modifican los parámetros o la partición de entrenamiento.
 
----
+## Instalación
 
-## Algoritmo utilizado
-
-- **Algoritmo:** Random Forest Classifier
-- **Por qué:** Es robusto ante datos ruidosos, maneja bien variables categóricas y numéricas, y reduce el sobreajuste gracias al conjunto de árboles de decisión.
-- **Parámetros:** `n_estimators=100`, `random_state=42`, `criterion=gini`
-
-### Métricas obtenidas
-
-| Métrica | Valor |
-|---|---|
-| Accuracy | 93.0% |
-| Precision | 92.1% |
-| Recall | 92.1% |
-| Dataset de entrenamiento | 80% (569 registros) |
-| Dataset de prueba | 20% (143 registros) |
-
----
-
-## Dataset
-
-- **Fuente:** Titanic Dataset — Kaggle
-- **Tamaño:** 891 registros totales · 712 registros válidos (sin nulos)
-- **Features utilizadas:** `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Embarked`
-- **Variable objetivo:** `Survived` (0 = No sobrevivió · 1 = Sobrevivió)
-
----
-
-## Instalación local
-
-### Requisitos
-
-- Python 3.10+
-- pip
-
-### Pasos
+1. Instalar dependencias:
 
 ```bash
-git clone https://github.com/Yefryalexis123/loan-prediction-random-forest.git
-cd loan-prediction-random-forest
 pip install -r requirements.txt
 ```
 
-### Ejecutar la aplicación
+2. Entrenar el modelo:
 
 ```bash
-python -m streamlit run app/app.py
+python train_model.py
 ```
 
----
+3. Ejecutar la aplicación:
 
-## Uso
-
-1. Ingresa los datos del pasajero en el formulario (clase, sexo, edad, tarifa, puerto de embarque)
-2. Presiona **Predecir supervivencia**
-3. El modelo muestra si el pasajero habría sobrevivido o no, junto con el porcentaje de confianza
-
----
-
-## Estructura del proyecto
-
-```
-loan-prediction-random-forest/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── data/
-│   └── raw/
-│       └── titanic.csv
-│
-├── notebooks/
-│   └── Grupo4_Notebook2_Librerias_FINAL_ipynb.ipynb
-│
-├── models/
-│   └── modelo.pkl
-│
-├── src/
-│   ├── __init__.py
-│   └── preprocessing.py
-│
-├── app/
-│   └── app.py
-│
-└── docs/
-    ├── captura_inicio.png
-    └── captura_resultado.png
+```bash
+streamlit run app.py
 ```
 
----
+## Explicación del modelo
 
-## Despliegue planificado
+Random Forest es un algoritmo de aprendizaje supervisado basado en múltiples árboles de decisión. Cada árbol realiza una predicción y el bosque combina esos resultados para producir una clasificación más estable. En este caso, el modelo aprende patrones entre variables académicas, personales y económicas para clasificar el estado final del estudiante.
 
-- **Servicio:** Streamlit Cloud
-- **Estado:** En proceso
-- **URL:** Próximamente
+## Nota importante
+
+Este modelo no debe utilizarse como una decisión definitiva sobre un estudiante. Su función es servir como apoyo analítico para identificar tendencias, posibles riesgos académicos y oportunidades de acompañamiento institucional.
